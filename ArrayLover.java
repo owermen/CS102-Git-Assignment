@@ -41,6 +41,7 @@ public class ArrayLover {
             }
 
             if(answer == 4){
+                sumEvenOdd(array);
 
                 //sum of odd and even
             }
@@ -50,14 +51,19 @@ public class ArrayLover {
                  System.out.println("Goodbye!");
             }
 
-
-
-
-
-
-
-
         }
+
+        
+
+
+
+
+
+
+
+           
+
+        
 
 
 
@@ -68,5 +74,25 @@ public class ArrayLover {
 
 
     }
+
+     public static void sumEvenOdd(int[] array){
+                int odd = 0;
+                int even = 0;
+
+                for(int i = 0; i<array.length; i++){
+                    if(i == 0 || i%2 == 0){
+                        even+= array[i];
+                    }
+
+                    if(i%2 != 0){
+                        odd+= array[i];
+                    }
+                }
+
+                System.out.println("Sum of the even indexes are " + even);
+                System.out.println("Sum of the odd indexes are " + odd);
+
+
+            }
     
 }
