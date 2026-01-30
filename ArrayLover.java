@@ -8,6 +8,7 @@ public class ArrayLover {
         Scanner in = new Scanner(System.in);
         Random rn = new Random();
 
+        System.out.println("Enter the range of the array: ");
         int range = in.nextInt();
         in.nextLine();
 
@@ -30,11 +31,11 @@ public class ArrayLover {
             in.nextLine();
 
             if (answer == 1) {
-                // MINIMUM
+                minimum(array);
             }
 
             if (answer == 2) {
-                // Maximum
+                maximum(array);
             }
 
             if (answer == 3) {
@@ -54,6 +55,16 @@ public class ArrayLover {
 
         in.close();
     }
+    public static void maximum(int[] array){
+        int max = array[0];
+        for (int num : array) {
+          if (num > max) {
+            max = num;
+          }
+        }
+        System.out.println("Maximum value is: " + max);
+    }
+
 
     public static void minimum(int[] array){
         int min = array[0];
@@ -62,27 +73,24 @@ public class ArrayLover {
             min = num;
           }
         }
-        return min;
-    }
-
-    public static void maximum(int[] array){
-
+        System.out.println("Minimum value is: " + min);
     }
 
     public static void average(int[] array) {
-        double average;
+        int average;
         int sum = 0;
 
         for (int n : array) {
             sum += n;
         }
 
-        average = (double) sum / array.length;
+        average = sum / array.length;
 
-        double[] normalizedArray = new double[array.length];
+        int[] normalizedArray = new int[array.length];
 
         for (int i = 0; i < array.length; i++) {
             normalizedArray[i] = array[i] - average;
+
         }
 
         System.out.println("Differences from the average: " + Arrays.toString(normalizedArray));
