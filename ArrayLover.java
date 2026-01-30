@@ -56,7 +56,13 @@ public class ArrayLover {
     }
 
     public static void minimum(int[] array){
-        
+        int min = array[0];
+        for (int num : array) {
+          if (num < min) {
+            min = num;
+          }
+        }
+        return min;
     }
 
     public static void maximum(int[] array){
@@ -103,3 +109,4 @@ public class ArrayLover {
     }
 
 }
+
